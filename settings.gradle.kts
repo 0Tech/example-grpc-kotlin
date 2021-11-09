@@ -16,4 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "example-grpc-kotlin"
 include(
     "protobuf",
+    "server",
 )
