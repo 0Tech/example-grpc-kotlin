@@ -34,6 +34,12 @@ protobuf {
     }
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().all {
+    kotlinOptions {
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
+    }
+}
+
 dependencies {
     api(libs.grpc.protobuf)
     api(libs.grpc.kotlin.stub)
